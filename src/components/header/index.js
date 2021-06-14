@@ -1,10 +1,13 @@
 import React from 'react';
 import { FaHome, FaSignInAlt, FaUser } from 'react-icons/fa'; // fa = font awesome
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import { Nav } from './styled';
 
 export default function Headers() {
+  const botaoClicado = useSelector((state) => state.example.botaoClicado);
+
   return (
     <Nav>
       <Link to="alunos">
@@ -16,6 +19,7 @@ export default function Headers() {
       <Link to="users">
         <FaUser size={24} />
       </Link>
+      {botaoClicado ? 'Clicado' : 'Não clicado'}
     </Nav>
   );
 }

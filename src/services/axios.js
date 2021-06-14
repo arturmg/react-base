@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'https://curso1.artur.eng.br',
+  baseURL: 'COLOCAR_SUA_URL_AQUI',
 });
